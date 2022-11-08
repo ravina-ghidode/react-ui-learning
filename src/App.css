@@ -1,0 +1,22 @@
+#ico{
+
+    display: flex;
+    justify-content: space-around;
+   
+ 
+}
+
+#pro-ico{
+    border: 2px solid black;
+    background-color: aqua;
+}
+
+#pro-ico > div {
+    padding: 5px;
+}
+#deletebutton{
+    position: absolute;
+left:    0;
+bottom:   0;
+
+}
