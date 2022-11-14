@@ -18,7 +18,7 @@ const Home = (props:any) => {
   }, [props.isupdate]);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:3001/usersData");
+    const result = await axios.get("http://localhost:3000/usersData");
   
     setUser(result.data);
   };
