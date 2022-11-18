@@ -26,7 +26,7 @@ const EditUser = (props:any) => {
       
       const onSubmit = async (e: any) => {
         e.preventDefault();
-        await axios.put(`http://localhost:3001/usersData/${props.data.id}`, user);
+        await axios.put(`http://localhost:3000/usersData/${props.data.id}`, user);
         props.closeModal();
         props.loadUsers();
         navigate('/home');
@@ -34,7 +34,7 @@ const EditUser = (props:any) => {
       console.log(props.data);
       const navigate = useNavigate();
       const loadUsers = async () =>{
-        const result = axios.get(`http://localhost:3001/usersData/${props.data.id}`);
+        const result = axios.get(`http://localhost:3000/usersData/${props.data.id}`);
         setUser((await result).data);
    
         console.log(props.data);

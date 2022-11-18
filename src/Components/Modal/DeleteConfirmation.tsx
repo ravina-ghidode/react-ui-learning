@@ -16,7 +16,7 @@ const DeleteConfirmation = (props: any) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res: any = await axios.delete(
-          `http://localhost:3001/usersData/${props.data.id}`
+          `http://localhost:3000/usersData/${props.data.id}`
         );
         if (res) props.loadUsers();
         Swal.fire("Deleted!", "Your file has been deleted.", "success");

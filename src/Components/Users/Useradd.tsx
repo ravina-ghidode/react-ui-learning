@@ -17,7 +17,7 @@ const Useradd = (props:any) => {
   const onSubmit = async (e: any) => {
     e.preventDefault();
     try{
-      const res = await axios.post("http://localhost:3001/usersData", user);
+      const res = await axios.post("http://localhost:3000/usersData", user);
       if(res)props.closeModal();
       debugger;
       props.setIsUpdate(!props.isupdate);

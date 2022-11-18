@@ -9,6 +9,7 @@ import DeleteUser from "./Users/DeleteUser";
 import User from "./Users/User";
 
 import swal from 'sweetalert';
+import DeleteConfirmation from "./Modal/DeleteConfirmation";
 
 const Home = (props:any) => {
   const [users, setUser] = useState([]);
@@ -49,9 +50,9 @@ const Home = (props:any) => {
                 
                 <td id="ico">
                 <ModalComponent data={user} Children = {EditUser } icon={faPen} loadUsers={loadUsers}></ModalComponent>
-                <ModalComponent  data={user} Children={DeleteUser}  loadUsers={loadUsers} icon={faTrash}></ModalComponent>
+                {/* <ModalComponent  data={user} Children={DeleteUser}  loadUsers={loadUsers} icon={faTrash}></ModalComponent> */}
                 <ModalComponent data={user} Children={User} loadUsers={loadUsers}  icon={faEye}></ModalComponent>
-                
+                <DeleteConfirmation data={user} icon={faTrash} loadUsers={loadUsers} ></DeleteConfirmation> 
               
               
 
